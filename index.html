@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+    <h1>Conversor de Temperaturas</h1>
+      <p>
+        <label for="centigrados">Indica el valor en grados centígrados:
+            <input type="number" id="centigrados" value="23">
+        </label>
+        </p>
+        <br>
+        <p>
+        <button type="button" onclick="convertir()"> Calcular valores
+        </button>
+    </p>
+    <p id="kelvin">Kelvin</p>
+    <p id="farenheit">Farenheit</p>
+    <p id="rankine">Rankine</p>
+    <p id="reaumur">Reaumur</p>
+
+    <img src="./img/temperatura.png" alt="foto">
+       <script>
+
+        function convertir() {
+            console.clear //limpia consola
+            let gradosCentigrados = Number(document.getElementById("centigrados").value);
+            console.log("gradosCentigrados", gradosCentigrados);
+
+            let gradosKelvin = (gradosCentigrados + 273.15).toFixed(2);
+            //para que solo salgan dos decimales
+            console.log("gradosKelvin", gradosKelvin);
+
+            let gradosFarenheit = (gradosCentigrados * 9 / 5 + 32).toFixed(2);
+            console.log("gradosFarenheit", gradosFarenheit);
+
+            let gradosRankine = ((gradosCentigrados + 273.15) * 9 / 5).toFixed(2);
+            console.log("gradosRankine", gradosRankine);
+
+            let gradosReaumur = (gradosCentigrados * 4 / 5).toFixed(2);
+            console.log("gradosReaumur", gradosReaumur);
+
+            /*PODEMOS USAR */
+            //comillas dobles (hay que conatenar las varialbes con +)
+
+            document.getElementById("kelvin").innerHTML = "Grados Kelvin: " + gradosKelvin; 
+            document.getElementById("farenheit").innerHTML = "Grados Farenheit: " + gradosFarenheit;
+            document.getElementById("rankine").innerHTML = "Grados Rankine: " + gradosRankine;
+            document.getElementById("reaumur").innerHTML = "Grados Reaumur: " + gradosReaumur;
+            //TEMPLATE STRING
+            // Se cierra la expresion entre acentos graves `` y las variables dentro (dentro) entre ${nombre variable}
+            //document.getElementById("rankine").innerHTLM = `Grados Rankine: ${gradosRankine}´;
+            //ojo acento no comillas
+
+            /*Las comillas dobles y simples se pueden itercmbiar para intepretar la otra como texto
+            Ejemplo:
+                        //const cita = '"Más vale pájaro en mano que cien volando"';
+                        //aler(CITA);
+                        //const APELLIDO = "Fontanillus"
+                        */
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
