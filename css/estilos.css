@@ -2,20 +2,20 @@ body {
       width: 50%;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       width: 80%;
-      height: 70vh;
+      height: 90vh;
       margin-left: 9%;
       margin-right: 25%;
       border-width: 10px;
       min-height: 100%;
-      margin-top: 5%;
-      margin-bottom: 5%;
+      margin-top: 1%;
+      margin-bottom: 1%;
       border-style: double;
       border-width: 20px;
       border-color: white;
       min-height: 100%;
       text-align: center;
       background-image: url(../img/Snowflakes-stars-blue-background_5120x2880.jpg);
-      font-size: larger;
+      font-size:x-large;
       color: white;
       padding-top: 80px;
       text-shadow: blue 2px 2px;
@@ -29,7 +29,7 @@ h1 {
 }
 
 img {
-      width: 30%;
+      width: 25%;
 }
 
 #kelvin,
@@ -37,4 +37,14 @@ img {
 #rankine,
 #reaumur {
       font-weight: bold;
+      text-align: left;
+      margin-left: 100px;
+}
+
+button {
+padding-top: 1%;
+padding-bottom: 1%;
+color: blue;
+background-color:white;
+font-weight: bold;
 }
